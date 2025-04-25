@@ -11,21 +11,19 @@ export default class Currency {
     this._name = name;
   }
 
-  // Getters
   get code() {
     return this._code;
   }
 
-  get name() {
-    return this._name;
-  }
-
-  // Setters
   set code(newCode) {
     if (typeof newCode !== 'string') {
       throw new TypeError('Code must be a string');
     }
     this._code = newCode;
+  }
+
+  get name() {
+    return this._name;
   }
 
   set name(newName) {
@@ -35,8 +33,8 @@ export default class Currency {
     this._name = newName;
   }
 
-  // Method
   displayFullCurrency() {
     return `${this._name} (${this._code})`;
   }
 }
+
